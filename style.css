@@ -1,0 +1,123 @@
+
+/* IDENTIDADE VISUAL DO PORTFOLIO */
+
+:root {
+    --azul-marinho: #163A63;
+    --azul-claro: #DCEBFA;
+    --branco: #FFFFFF;
+    --fundo: #F7F9FC;
+    --texto: #263445;
+    --texto-suave: #526579;
+    --borda: #D7E3F0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--branco);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+header,
+nav,
+main,
+footer {
+    width: 100%;
+}
+
+header {
+    padding: 40px 8% 24px;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--azul-marinho);
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+
+header p {
+    margin: 4px 0 0;
+    color: var(--texto-suave);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    padding: 16px 8%;
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+    background: var(--branco);
+}
+
+nav a {
+    color: var(--azul-marinho);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #3976B9;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+main {
+    max-width: 1100px;
+    min-height: 55vh;
+    margin: 0 auto;
+    padding: 48px 8%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--azul-marinho);
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+p {
+    max-width: 720px;
+}
+
+a {
+    transition: color 0.2s ease;
+}
+
+footer {
+    padding: 24px 8%;
+    border-top: 1px solid var(--borda);
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding-top: 28px;
+    }
+
+    nav {
+        gap: 12px 18px;
+    }
+
+    main {
+        padding-top: 32px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
