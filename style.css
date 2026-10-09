@@ -385,3 +385,99 @@ p {
         flex-direction: column;
     }
 }
+
+/* ========================================
+   CAPAS EDITORIAIS E ACABAMENTO DOS CARTOES
+   ======================================== */
+
+.project-card {
+    overflow: hidden;
+    transition: border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #A9C6E5;
+    transform: translateY(-3px);
+}
+
+.project-placeholder {
+    position: relative;
+    overflow: hidden;
+    min-height: 190px;
+    background:
+        linear-gradient(135deg, #F1F6FC 0%, #DCEBFA 100%);
+}
+
+.project-placeholder::before {
+    position: absolute;
+    top: -55px;
+    right: -30px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(22, 58, 99, 0.15);
+    border-radius: 50%;
+    content: "";
+}
+
+.project-placeholder::after {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    height: 1px;
+    background: rgba(22, 58, 99, 0.2);
+    content: "";
+}
+
+.project-placeholder span {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* Variacoes sutis entre as capas */
+
+.project-card:nth-child(4n + 2) .project-placeholder {
+    background: linear-gradient(135deg, #F7F9FC, #E8EEF6);
+}
+
+.project-card:nth-child(4n + 3) .project-placeholder {
+    background: linear-gradient(135deg, #E8F1FA, #D2E3F5);
+}
+
+.project-card:nth-child(4n + 4) .project-placeholder {
+    background: linear-gradient(135deg, #F3F6FA, #E1EAF4);
+}
+
+/* Imagens reais, quando forem adicionadas */
+
+.project-placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+    object-fit: cover;
+}
+
+/* Evita movimentos extras para quem prefere
+   animacoes reduzidas */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .project-card {
+        transition: none;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
+}
