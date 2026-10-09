@@ -1,21 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audiovisual</title>
+    <meta name="description" content="Produções audiovisuais de Joyce Rodrigues.">
+    <title>Audiovisual | Joyce Rodrigues</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Início</a> 
-        <a href="reportagens.html">Reportagens</a> 
-        <a href="audiovisual.html">Audiovisual</a> 
-        <a href="producao.html">Produção</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">Joyce Rodrigues</a>
+            <p class="brand-subtitle">Jornalismo · Reportagem · Produção</p>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Navegação principal">
+        <div class="nav-inner">
+            <a href="index.html">Início</a>
+            <a href="reportagens.html">Reportagens</a>
+            <a href="audiovisual.html" aria-current="page">Audiovisual</a>
+            <a href="producao.html">Produção</a>
+        </div>
     </nav>
 
-    <h1>Audiovisual</h1>
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">02 / Imagem e som</p>
+            <h1>Audiovisual</h1>
+            <p class="lead">
+                Um espaço para reunir vídeos, entrevistas, reportagens
+                audiovisuais e outros projetos em imagem e som.
+            </p>
+        </section>
+
+        <section aria-label="Seleção de produções audiovisuais">
+            <div class="section-heading">
+                <h2>Produções selecionadas</h2>
+                <p>Espaços preparados para receber seus vídeos.</p>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-placeholder" aria-hidden="true">
+                        <span>▶ 01</span>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-category">Reportagem em vídeo</p>
+                        <h3>Espaço para o título do vídeo</h3>
+                        <p>
+                            Adicione uma descrição curta, a data e o link
+                            para assistir à produção.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-placeholder" aria-hidden="true">
+                        <span>▶ 02</span>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-category">Entrevista</p>
+                        <h3>Espaço para uma entrevista</h3>
+                        <p>
+                            Informe o tema, os participantes e onde o
+                            conteúdo foi publicado.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-placeholder" aria-hidden="true">
+                        <span>▶ 03</span>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-category">Projeto audiovisual</p>
+                        <h3>Espaço para outra produção</h3>
+                        <p>
+                            Reserve este espaço para um documentário,
+                            vídeo ou projeto de interesse.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-placeholder" aria-hidden="true">
+                        <span>▶ 04</span>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-category">Outros formatos</p>
+                        <h3>Espaço para um novo trabalho</h3>
+                        <p>
+                            Inclua o resumo do projeto e o endereço
+                            onde o público poderá assisti-lo.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>Joyce Rodrigues · Portfólio Jornalístico</p>
+            <p>Produções audiovisuais.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
