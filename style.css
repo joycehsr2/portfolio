@@ -1,17 +1,19 @@
 
-/* =====================================
-   1. CORES E CONFIGURACOES GERAIS
-   ===================================== */
+/* ========================================
+   PORTFOLIO JORNALISTICO — JOYCE RODRIGUES
+   Identidade editorial e elegante
+   ======================================== */
 
 :root {
     --navy: #163A63;
     --blue: #3976B9;
     --light-blue: #DCEBFA;
-    --white: #FFFFFF;
+    --paper: #FFFFFF;
     --background: #F7F9FC;
     --text: #263445;
-    --muted: #526579;
+    --muted: #65758A;
     --border: #D7E3F0;
+    --max-width: 1120px;
 }
 
 * {
@@ -24,78 +26,112 @@ html {
 
 body {
     margin: 0;
-    background: var(--white);
+    background: var(--paper);
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.7;
 }
 
-/* =====================================
-   2. CABECALHO
-   ===================================== */
-
-header {
-    padding: 36px 8% 28px;
-    border-bottom: 3px solid var(--light-blue);
-}
-
-header h1 {
-    margin: 0;
+a {
     color: var(--navy);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    font-weight: 700;
-    letter-spacing: -1px;
-    line-height: 1.2;
-}
-
-header p {
-    margin: 8px 0 0;
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
-/* =====================================
-   3. MENU DE NAVEGACAO
-   ===================================== */
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px 28px;
-    padding: 16px 8%;
-    border-bottom: 1px solid var(--border);
-    background: var(--white);
-}
-
-nav a {
-    display: inline-block;
-    padding: 4px 0;
-    color: var(--navy);
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
     transition: color 0.2s ease;
 }
 
-nav a:hover,
-nav a:focus-visible {
+a:hover {
     color: var(--blue);
-    text-decoration: underline;
-    text-underline-offset: 6px;
 }
 
-/* =====================================
-   4. CONTEUDO PRINCIPAL
-   ===================================== */
+a:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 4px;
+}
+
+/* CABECALHO */
+
+.site-header {
+    padding: 34px 24px 26px;
+    border-bottom: 3px solid var(--light-blue);
+}
+
+.header-inner,
+.nav-inner,
+.footer-inner {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.brand {
+    display: inline-block;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: var(--navy);
+}
+
+.brand-subtitle {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+}
+
+/* MENU */
+
+.site-nav {
+    padding: 0 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--paper);
+}
+
+.nav-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 30px;
+    align-items: center;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: 15px 0 13px;
+    border-bottom: 2px solid transparent;
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    border-bottom-color: var(--blue);
+    color: var(--navy);
+}
+
+/* CONTEUDO */
 
 main {
     width: 100%;
-    max-width: 1100px;
+    max-width: var(--max-width);
     min-height: 55vh;
     margin: 0 auto;
-    padding: 48px 8%;
+    padding: 54px 24px 72px;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: var(--blue);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 }
 
 h1,
@@ -105,86 +141,247 @@ h3 {
     line-height: 1.25;
 }
 
+h1,
 h2 {
-    margin-top: 0;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    letter-spacing: -0.5px;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    letter-spacing: -0.6px;
 }
 
 h3 {
-    font-size: 1.2rem;
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+    line-height: 1.4;
 }
 
 p {
     max-width: 720px;
 }
 
-a {
-    overflow-wrap: anywhere;
+.lead {
+    max-width: 700px;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.8;
 }
 
-/* =====================================
-   5. AREAS DE TRABALHO FUTURAS
-   ===================================== */
-
-section {
-    margin-bottom: 48px;
+.section-heading {
+    margin-bottom: 28px;
 }
 
-img,
-video,
-iframe {
-    max-width: 100%;
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
 }
 
-/* =====================================
-   6. RODAPE
-   ===================================== */
+/* DESTAQUE DA PAGINA INICIAL */
 
-footer {
-    padding: 24px 8%;
-    border-top: 1px solid var(--border);
+.hero {
+    padding: 22px 0 58px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+    max-width: 850px;
+}
+
+.hero .lead {
+    margin-bottom: 28px;
+}
+
+.text-link {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link span {
+    font-size: 1.2rem;
+}
+
+/* CARTOES DE SECOES E PROJETOS */
+
+.content-section {
+    padding-top: 48px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-height: 190px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+}
+
+.card-number {
+    margin: 0 0 20px;
+    color: var(--blue);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.card p {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.card .text-link {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    min-width: 0;
+    border: 1px solid var(--border);
+    background: var(--paper);
+}
+
+.project-placeholder {
+    display: flex;
+    min-height: 155px;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
     background: var(--background);
     color: var(--muted);
-    font-size: 0.85rem;
+    text-align: center;
 }
 
-/* =====================================
-   7. ACESSIBILIDADE
-   ===================================== */
-
-a:focus-visible {
-    outline: 2px solid var(--blue);
-    outline-offset: 4px;
+.project-placeholder span {
+    color: var(--blue);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
 }
 
-/* =====================================
-   8. CELULARES E TELAS PEQUENAS
-   ===================================== */
+.project-info {
+    padding: 22px;
+}
 
-@media (max-width: 600px) {
-    header {
-        padding: 28px 6% 22px;
+.project-category {
+    margin: 0 0 10px;
+    color: var(--blue);
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.project-info p:last-child {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.93rem;
+}
+
+/* INTRODUCAO DAS PAGINAS INTERNAS */
+
+.page-intro {
+    max-width: 760px;
+    margin-bottom: 42px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-intro h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+}
+
+/* RODAPE */
+
+.site-footer {
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    background: var(--background);
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+}
+
+.site-footer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+}
+
+/* TELAS PEQUENAS */
+
+@media (max-width: 640px) {
+    .site-header {
+        padding: 27px 20px 22px;
     }
 
-    nav {
-        gap: 8px 18px;
-        padding: 14px 6%;
+    .site-nav {
+        padding: 0 20px;
     }
 
-    nav a {
-        font-size: 0.9rem;
+    .nav-inner {
+        gap: 4px 20px;
+    }
+
+    .site-nav a {
+        padding: 12px 0 10px;
+        font-size: 0.87rem;
     }
 
     main {
-        padding: 32px 6%;
+        padding: 38px 20px 52px;
     }
 
-    footer {
-        padding: 22px 6%;
+    .hero {
+        padding-bottom: 40px;
     }
 
-    section {
-        margin-bottom: 36px;
+    .card-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 170px;
+        padding: 22px;
+    }
+
+    .content-section {
+        padding-top: 36px;
+    }
+
+    .site-footer {
+        padding: 22px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
     }
 }
